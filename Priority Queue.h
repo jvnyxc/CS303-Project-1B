@@ -5,8 +5,8 @@ using namespace std;
 
 struct Node
 {
-	Employee data;
-	struct Node* next;
+	Employee* data;
+	Node* next;
 };
 
 class PriorityQueue
@@ -19,5 +19,5 @@ public:
 
 private:
 	int numberOfEmployee;
-	Node* head;
+	Node * head;
 };
