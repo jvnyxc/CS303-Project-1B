@@ -31,3 +31,30 @@ void PriorityQueue::push(Employee* employee)
 	}
 	numberOfEmployee++;
 }
+
+bool PriorityQueue::isEmpty()
+{
+	if (numberOfEmployee == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+void PriorityQueue::pop()
+{
+	Node* temp;
+	if (head == NULL)
+	{
+		cout << "Queue is empty nothing to pop" << endl;
+	}
+	else
+	{
+		temp = head;
+		head = head->next;
+		free(temp);
+	}
+}
