@@ -145,6 +145,7 @@
     <ClInclude Include="StringTokenizer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Book.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Priority Queue.cpp" />
   </ItemGroup>

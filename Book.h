@@ -3,6 +3,7 @@
 #include<string>
 #include "Date.h"
 #include "Employee.h"
+#include "Priority Queue.h"
 using namespace std;
 
 class Book
@@ -18,6 +19,7 @@ public:
 	string getBookName();
 	Date getDateStart();
 	Date getDateEnd();
+	PriorityQueue getQueue();
 
 	bool isArchived();
 	void addEmployeeToQueue(Employee* user);
@@ -28,4 +30,5 @@ private:
 	Date dateStart;
 	Date dateEnd;
 	bool archived;
+	PriorityQueue queue;
 };
