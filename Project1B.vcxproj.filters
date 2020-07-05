@@ -24,6 +24,9 @@
     <ClInclude Include="Employee.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp">
