@@ -23,13 +23,19 @@ void Book::setBookName(string bookName)
 //Setter for start date
 void Book::setDateStart(Date dateStart)
 {
-	this->dateStart = dateStart;
+	this->dateStart = dateLastHeld = dateStart;
 }
 
 //Setter for end date
 void Book::setDateEnd(Date dateEnd)
 {
 	this->dateEnd = dateEnd;
+}
+
+//Setter for the date that someone who last held onto the book
+void Book::setLastHeldDate(Date newLastHeld)
+{
+	this->dateLastHeld = newLastHeld;
 }
 
 //Getter for book name
@@ -50,10 +56,16 @@ Date Book::getDateEnd()
 	return this->dateEnd;
 }
 
-//Getter for the queue
-PriorityQueue Book::getQueue()
+//Getter for the date that someone who last held onto the book
+Date Book::getLastHeldDate()
 {
-	return this->queue;
+	return this->dateLastHeld;
+}
+
+//Returnes the employee who is at the front of the priority queue
+Employee* Book::top()
+{
+	return queue.top();
 }
 
 //Will return true if there are no employees in the queue if not then return false
@@ -63,14 +75,23 @@ bool Book::isArchived()
 	return this->archived;
 }
 
-//Pushes the employee into the queue
-void Book::addEmployeeToQueue(Employee* user)
+//Pushes the employees  from the list into the queue
+void Book::addEmployeeToQueue(const list<Employee*> listOfEmployees)
 {
-	queue.push(user);
+	for (list<Employee*>::const_iterator it = listOfEmployees.begin(); it != listOfEmployees.end(); it++)
+	{
+		queue.push(*it);
+	}
 }
 
 //Pops the highest priority employee
 void Book::removeHighPriority()
 {
 	queue.pop();
+}
+
+//Updates the queue or sort the queue in decreasing order of priority
+void Book::updateQueue()
+{
+	queue.updateQueue();
 }
