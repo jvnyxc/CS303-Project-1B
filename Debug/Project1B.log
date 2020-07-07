@@ -1,7 +1,2 @@
-﻿  Book.cpp
-C:\Users\Jayson\Documents\CS 303\Project1B\Project1B\StringTokenizer.h(27,40): error C4596: 'has_more_tokens': illegal qualified name in member declaration
-C:\Users\Jayson\Documents\CS 303\Project1B\Project1B\StringTokenizer.h(35,42): error C4596: 'next_token': illegal qualified name in member declaration
-C:\Users\Jayson\Documents\CS 303\Project1B\Project1B\StringTokenizer.h(53,34): error C4596: 'find_next': illegal qualified name in member declaration
-  Employee.cpp
-  Priority Queue.cpp
-  Generating Code...
+﻿  Main.cpp
+  Project1B.vcxproj -> C:\Users\Jayson\Documents\CS 303\Project1B\Debug\Project1B.exe

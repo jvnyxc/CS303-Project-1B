@@ -6,18 +6,27 @@ using namespace std;
 struct Node
 {
 	Employee* data;
-	Node* next;
+	struct Node* next;
 };
 
 class PriorityQueue
 {
 public:
+	//Constructor
 	PriorityQueue();
+
+	//Destructor
+	~PriorityQueue();
+
+	//Functions
 	void push(Employee* employee);
 	bool isEmpty();
 	void pop();
+	void swap(struct Node* ptr1, struct Node* ptr2);
+	void updateQueue();
+	Employee* top();
 
 private:
 	int numberOfEmployee;
-	Node * head;
+	Node* head;
 };
