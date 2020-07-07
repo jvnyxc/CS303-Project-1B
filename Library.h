@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <string>
 #include <list>
@@ -12,14 +11,20 @@ using namespace std;
 class Library
 {
 public:
+	//Constructor
 	Library();
 
-	void passOn(Book book, Date date);
-	void circulateBook(Book book, Date date);
-	void addEmployee(Employee employeeName);
-	void addBook(Book bookName);
+	//Destructor
+	~Library();
+
+	//Functions
+	void passOn(string bookName, Date date);
+	void circulateBook(string bookName, Date date);
+	void addEmployee(string name);
+	void addBook(string bookName);
 
 private:
-	list<Employee> listOfEmployees;
+	list<Employee*> listOfEmployees;
 	list<Book> listOfBooks;
+	list<Book> listOfArchivedBooks;
 };
