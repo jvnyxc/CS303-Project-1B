@@ -25,6 +25,7 @@ public:
 	void swap(struct Node* ptr1, struct Node* ptr2);
 	void updateQueue();
 	Employee* top();
+	//void showQueue();
 
 private:
 	int numberOfEmployee;

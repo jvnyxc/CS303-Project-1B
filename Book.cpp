@@ -95,3 +95,12 @@ void Book::updateQueue()
 {
 	queue.updateQueue();
 }
+
+//Used to show the queue
+//Mostly for testing purposes
+/*
+void Book::showQueue()
+{
+	queue.showQueue();
+}
+*/

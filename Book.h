@@ -32,6 +32,7 @@ public:
 	void addEmployeeToQueue(const list<Employee*> listOfEmployees);
 	void removeHighPriority();
 	void updateQueue();
+	//void showQueue();
 
 private:
 	string bookName;
